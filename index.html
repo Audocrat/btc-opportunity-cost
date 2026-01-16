@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTC Opportunity Cost Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <span class="btc-icon">₿</span>
+                <h1>The Real Cost Calculator</h1>
+            </div>
+            <p class="tagline">See what your daily indulgences could become if you invested in Bitcoin instead</p>
+        </header>
+
+        <!-- Live BTC Price Banner -->
+        <div class="btc-price-banner">
+            <div class="price-item">
+                <span class="label">Live BTC Price</span>
+                <span class="value" id="btc-price-display">Loading...</span>
+            </div>
+            <div class="price-item">
+                <span class="label">Target Price</span>
+                <span class="value target">$1,000,000</span>
+                <span class="estimate" id="target-estimate">~2030-2032</span>
+            </div>
+            <div class="price-item">
+                <span class="label">Growth Multiple</span>
+                <span class="value multiple" id="growth-multiple">--x</span>
+            </div>
+            <div class="country-selector">
+                <label for="country-select">Your Country:</label>
+                <select id="country-select">
+                    <option value="CZ">🇨🇿 Czech Republic (CZK)</option>
+                    <option value="US">🇺🇸 United States (USD)</option>
+                    <option value="GB">🇬🇧 United Kingdom (GBP)</option>
+                    <option value="EU">🇪🇺 Eurozone (EUR)</option>
+                    <option value="PL">🇵🇱 Poland (PLN)</option>
+                    <option value="DE">🇩🇪 Germany (EUR)</option>
+                    <option value="SK">🇸🇰 Slovakia (EUR)</option>
+                    <option value="HU">🇭🇺 Hungary (HUF)</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Indulgence Items Grid -->
+            <section class="indulgence-section">
+                <h2>Click items you consume regularly</h2>
+                <p class="instruction">Each click adds one unit. See the real opportunity cost!</p>
+
+                <div class="items-grid" id="items-grid">
+                    <!-- Items will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Results Panel -->
+            <section class="results-panel">
+                <h2>Your Opportunity Cost</h2>
+
+                <div class="selected-items" id="selected-items">
+                    <p class="empty-state">Click items above to see the cost</p>
+                </div>
+
+                <div class="totals">
+                    <div class="total-row">
+                        <span class="total-label">Total Spent Today:</span>
+                        <span class="total-value" id="total-spent">0</span>
+                    </div>
+                    <div class="total-row">
+                        <span class="total-label">BTC You Could Buy:</span>
+                        <span class="total-value btc" id="btc-amount">0.00000000 BTC</span>
+                    </div>
+                    <div class="total-row highlight">
+                        <span class="total-label">Value at $1M BTC:</span>
+                        <span class="total-value future" id="future-value">0</span>
+                    </div>
+                    <div class="total-row multiplier">
+                        <span class="total-label">You're "paying":</span>
+                        <span class="total-value" id="real-cost-multiple">0x more</span>
+                    </div>
+                </div>
+
+                <button class="reset-btn" id="reset-btn">Reset Selection</button>
+
+                <!-- Time Period Calculator -->
+                <div class="time-calculator">
+                    <h3>Project Over Time</h3>
+                    <div class="time-options">
+                        <button class="time-btn active" data-days="1">Daily</button>
+                        <button class="time-btn" data-days="7">Weekly</button>
+                        <button class="time-btn" data-days="30">Monthly</button>
+                        <button class="time-btn" data-days="365">Yearly</button>
+                    </div>
+                    <div class="time-results">
+                        <div class="time-result">
+                            <span class="time-label">Period Cost:</span>
+                            <span class="time-value" id="period-cost">0</span>
+                        </div>
+                        <div class="time-result">
+                            <span class="time-label">BTC Accumulated:</span>
+                            <span class="time-value" id="period-btc">0.00000000 BTC</span>
+                        </div>
+                        <div class="time-result highlight">
+                            <span class="time-label">Future Value:</span>
+                            <span class="time-value" id="period-future">0</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Live prices from CoinGecko API • Not financial advice • <span id="last-updated">--</span></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

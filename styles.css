@@ -1,0 +1,544 @@
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --btc-orange: #f7931a;
+    --btc-orange-dark: #e8850f;
+    --dark-bg: #0d1117;
+    --card-bg: #161b22;
+    --card-border: #30363d;
+    --text-primary: #f0f6fc;
+    --text-secondary: #8b949e;
+    --success-green: #238636;
+    --highlight-red: #f85149;
+    --highlight-gold: #ffd700;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--dark-bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--card-bg) 0%, #1a1f26 100%);
+    border-radius: 16px;
+    margin-bottom: 24px;
+    border: 1px solid var(--card-border);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.btc-icon {
+    font-size: 48px;
+    color: var(--btc-orange);
+    text-shadow: 0 0 30px rgba(247, 147, 26, 0.5);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--btc-orange), var(--highlight-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.tagline {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== BTC PRICE BANNER ===== */
+.btc-price-banner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    margin-bottom: 24px;
+}
+
+.price-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 24px;
+    border-right: 1px solid var(--card-border);
+}
+
+.price-item:last-of-type {
+    border-right: none;
+}
+
+.price-item .label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.price-item .value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--btc-orange);
+}
+
+.price-item .value.target {
+    color: var(--highlight-gold);
+}
+
+.price-item .value.multiple {
+    color: var(--success-green);
+}
+
+.price-item .estimate {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    padding: 4px 10px;
+    background: rgba(255, 215, 0, 0.15);
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.country-selector {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.country-selector label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.country-selector select {
+    padding: 10px 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--card-border);
+    background: var(--dark-bg);
+    color: var(--text-primary);
+    cursor: pointer;
+    min-width: 220px;
+}
+
+.country-selector select:focus {
+    outline: none;
+    border-color: var(--btc-orange);
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 24px;
+}
+
+@media (max-width: 1000px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== INDULGENCE SECTION ===== */
+.indulgence-section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    padding: 24px;
+}
+
+.indulgence-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.instruction {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 16px;
+}
+
+.item-card {
+    position: relative;
+    background: var(--dark-bg);
+    border: 2px solid var(--card-border);
+    border-radius: 12px;
+    padding: 20px 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.item-card:hover {
+    border-color: var(--btc-orange);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(247, 147, 26, 0.2);
+}
+
+.item-card.selected {
+    border-color: var(--btc-orange);
+    background: rgba(247, 147, 26, 0.1);
+}
+
+.item-icon {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+.item-name {
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.item-price {
+    font-size: 0.9rem;
+    color: var(--btc-orange);
+    font-weight: 600;
+}
+
+.item-quantity {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--btc-orange);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.remove-btn {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    background: var(--highlight-red);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.remove-btn:hover {
+    background: #ff6b6b;
+}
+
+/* ===== RESULTS PANEL ===== */
+.results-panel {
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    padding: 24px;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.results-panel h2 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.selected-items {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 8px;
+}
+
+.empty-state {
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+}
+
+.selected-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.sel-icon {
+    font-size: 1.2rem;
+}
+
+.sel-name {
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.sel-qty {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.sel-price {
+    color: var(--btc-orange);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* ===== TOTALS ===== */
+.totals {
+    background: var(--dark-bg);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.total-row:last-child {
+    border-bottom: none;
+}
+
+.total-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.total-value {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.total-value.btc {
+    color: var(--btc-orange);
+    font-family: monospace;
+}
+
+.total-row.highlight {
+    background: rgba(247, 147, 26, 0.15);
+    margin: 8px -16px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    border: none;
+}
+
+.total-row.highlight .total-value.future {
+    color: var(--highlight-gold);
+    font-size: 1.3rem;
+}
+
+.total-row.multiplier .total-value {
+    color: var(--highlight-red);
+}
+
+.reset-btn {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid var(--card-border);
+    color: var(--text-secondary);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    margin-bottom: 24px;
+}
+
+.reset-btn:hover {
+    border-color: var(--highlight-red);
+    color: var(--highlight-red);
+}
+
+/* ===== TIME CALCULATOR ===== */
+.time-calculator {
+    border-top: 1px solid var(--card-border);
+    padding-top: 20px;
+}
+
+.time-calculator h3 {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+}
+
+.time-options {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.time-btn {
+    flex: 1;
+    padding: 10px;
+    background: var(--dark-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-secondary);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.time-btn:hover {
+    border-color: var(--btc-orange);
+}
+
+.time-btn.active {
+    background: var(--btc-orange);
+    border-color: var(--btc-orange);
+    color: white;
+}
+
+.time-results {
+    background: var(--dark-bg);
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.time-result {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 0.9rem;
+}
+
+.time-result .time-label {
+    color: var(--text-secondary);
+}
+
+.time-result .time-value {
+    font-weight: 600;
+}
+
+.time-result.highlight {
+    background: rgba(255, 215, 0, 0.1);
+    margin: 4px -12px;
+    padding: 10px 12px;
+    border-radius: 4px;
+}
+
+.time-result.highlight .time-value {
+    color: var(--highlight-gold);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-top: 24px;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--card-border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .btc-price-banner {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .price-item {
+        border-right: none;
+        border-bottom: 1px solid var(--card-border);
+        padding: 12px 0;
+        width: 100%;
+    }
+
+    .price-item:last-of-type {
+        border-bottom: none;
+    }
+
+    .items-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 12px;
+    }
+
+    .item-card {
+        padding: 16px 8px;
+    }
+
+    .item-icon {
+        font-size: 2rem;
+    }
+
+    .results-panel {
+        position: static;
+    }
+}
