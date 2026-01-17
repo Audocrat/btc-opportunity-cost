@@ -1,6 +1,12 @@
 // ===== CONFIGURATION =====
 const TARGET_BTC_PRICE = 1000000; // $1 Million USD target
 
+// ===== DONATION ADDRESSES - REPLACE WITH YOUR OWN =====
+const DONATION_CONFIG = {
+    btcAddress: 'YOUR_BTC_ADDRESS_HERE',  // Replace with your Bitcoin address
+    lightningAddress: 'YOUR_LIGHTNING_ADDRESS_HERE'  // Replace with your Lightning address or LNURL
+};
+
 // ===== TRANSLATIONS =====
 const TRANSLATIONS = {
     CZ: {
@@ -32,6 +38,16 @@ const TRANSLATIONS = {
         lastUpdated: "Poslední aktualizace:",
         loading: "Načítání...",
         error: "Chyba načítání ceny",
+        donationTitle: "Podpořte tento projekt",
+        donationSubtitle: "Pokud vám kalkulačka pomohla, zvažte poslání pár satoshi!",
+        lightning: "Lightning",
+        onchain: "On-chain",
+        sendBitcoin: "Poslat Bitcoin",
+        sendLightning: "Poslat přes Lightning",
+        addressLabel: "Adresa:",
+        copyAddress: "Kopírovat adresu",
+        copied: "Zkopírováno!",
+        donationThanks: "Děkujeme za podporu! 🧡",
         items: {
             cigarettes: "Cigarety (krabička)",
             beer_pub: "Pivo v hospodě",
@@ -80,6 +96,16 @@ const TRANSLATIONS = {
         lastUpdated: "Last updated:",
         loading: "Loading...",
         error: "Error loading price",
+        donationTitle: "Support this project",
+        donationSubtitle: "If this calculator helped you, consider sending some sats!",
+        lightning: "Lightning",
+        onchain: "On-chain",
+        sendBitcoin: "Send Bitcoin",
+        sendLightning: "Send via Lightning",
+        addressLabel: "Address:",
+        copyAddress: "Copy Address",
+        copied: "Copied!",
+        donationThanks: "Thank you for your support! 🧡",
         items: {
             cigarettes: "Cigarettes (pack)",
             beer_pub: "Beer at Bar",
@@ -128,6 +154,16 @@ const TRANSLATIONS = {
         lastUpdated: "Last updated:",
         loading: "Loading...",
         error: "Error loading price",
+        donationTitle: "Support this project",
+        donationSubtitle: "If this calculator helped you, consider sending some sats!",
+        lightning: "Lightning",
+        onchain: "On-chain",
+        sendBitcoin: "Send Bitcoin",
+        sendLightning: "Send via Lightning",
+        addressLabel: "Address:",
+        copyAddress: "Copy Address",
+        copied: "Copied!",
+        donationThanks: "Thank you for your support! 🧡",
         items: {
             cigarettes: "Cigarettes (pack)",
             beer_pub: "Beer at Pub",
@@ -176,6 +212,16 @@ const TRANSLATIONS = {
         lastUpdated: "Zuletzt aktualisiert:",
         loading: "Laden...",
         error: "Fehler beim Laden",
+        donationTitle: "Unterstützen Sie dieses Projekt",
+        donationSubtitle: "Wenn Ihnen dieser Rechner geholfen hat, senden Sie ein paar Sats!",
+        lightning: "Lightning",
+        onchain: "On-chain",
+        sendBitcoin: "Bitcoin senden",
+        sendLightning: "Per Lightning senden",
+        addressLabel: "Adresse:",
+        copyAddress: "Adresse kopieren",
+        copied: "Kopiert!",
+        donationThanks: "Vielen Dank für Ihre Unterstützung! 🧡",
         items: {
             cigarettes: "Zigaretten (Packung)",
             beer_pub: "Bier in der Kneipe",
@@ -224,6 +270,16 @@ const TRANSLATIONS = {
         lastUpdated: "Ostatnia aktualizacja:",
         loading: "Ładowanie...",
         error: "Błąd ładowania ceny",
+        donationTitle: "Wesprzyj ten projekt",
+        donationSubtitle: "Jeśli kalkulator Ci pomógł, rozważ wysłanie kilku satoshi!",
+        lightning: "Lightning",
+        onchain: "On-chain",
+        sendBitcoin: "Wyślij Bitcoin",
+        sendLightning: "Wyślij przez Lightning",
+        addressLabel: "Adres:",
+        copyAddress: "Kopiuj adres",
+        copied: "Skopiowano!",
+        donationThanks: "Dziękujemy za wsparcie! 🧡",
         items: {
             cigarettes: "Papierosy (paczka)",
             beer_pub: "Piwo w barze",
@@ -272,6 +328,16 @@ const TRANSLATIONS = {
         lastUpdated: "Zuletzt aktualisiert:",
         loading: "Laden...",
         error: "Fehler beim Laden",
+        donationTitle: "Unterstützen Sie dieses Projekt",
+        donationSubtitle: "Wenn Ihnen dieser Rechner geholfen hat, senden Sie ein paar Sats!",
+        lightning: "Lightning",
+        onchain: "On-chain",
+        sendBitcoin: "Bitcoin senden",
+        sendLightning: "Per Lightning senden",
+        addressLabel: "Adresse:",
+        copyAddress: "Adresse kopieren",
+        copied: "Kopiert!",
+        donationThanks: "Vielen Dank für Ihre Unterstützung! 🧡",
         items: {
             cigarettes: "Zigaretten (Packung)",
             beer_pub: "Bier in der Kneipe",
@@ -320,6 +386,16 @@ const TRANSLATIONS = {
         lastUpdated: "Posledná aktualizácia:",
         loading: "Načítava sa...",
         error: "Chyba načítania ceny",
+        donationTitle: "Podporte tento projekt",
+        donationSubtitle: "Ak vám kalkulačka pomohla, zvážte poslanie pár satoshi!",
+        lightning: "Lightning",
+        onchain: "On-chain",
+        sendBitcoin: "Poslať Bitcoin",
+        sendLightning: "Poslať cez Lightning",
+        addressLabel: "Adresa:",
+        copyAddress: "Kopírovať adresu",
+        copied: "Skopírované!",
+        donationThanks: "Ďakujeme za podporu! 🧡",
         items: {
             cigarettes: "Cigarety (krabička)",
             beer_pub: "Pivo v krčme",
@@ -368,6 +444,16 @@ const TRANSLATIONS = {
         lastUpdated: "Utoljára frissítve:",
         loading: "Betöltés...",
         error: "Hiba az ár betöltésekor",
+        donationTitle: "Támogassa ezt a projektet",
+        donationSubtitle: "Ha hasznos volt a kalkulátor, küldjön néhány satoshit!",
+        lightning: "Lightning",
+        onchain: "On-chain",
+        sendBitcoin: "Bitcoin küldése",
+        sendLightning: "Küldés Lightningon",
+        addressLabel: "Cím:",
+        copyAddress: "Cím másolása",
+        copied: "Másolva!",
+        donationThanks: "Köszönjük a támogatást! 🧡",
         items: {
             cigarettes: "Cigaretta (csomag)",
             beer_pub: "Sör a kocsmában",
@@ -599,6 +685,7 @@ let btcPriceUSD = null;
 let exchangeRates = {};
 let selectedItems = {};
 let selectedDays = 1;
+let currentCategory = 'all';
 
 // ===== TRANSLATION HELPER =====
 function t(key) {
@@ -651,6 +738,15 @@ function updateLanguage() {
     timeLabels[0].textContent = t('periodCost');
     timeLabels[1].textContent = t('btcAccumulated');
     timeLabels[2].textContent = t('futureValue');
+
+    // Donation section
+    document.getElementById('donation-title').textContent = t('donationTitle');
+    document.getElementById('donation-subtitle').textContent = t('donationSubtitle');
+    document.getElementById('lightning-text').textContent = t('lightning');
+    document.getElementById('onchain-text').textContent = t('onchain');
+    document.getElementById('address-label').textContent = t('addressLabel');
+    document.getElementById('copy-text').textContent = t('copyAddress');
+    document.getElementById('donation-note').textContent = t('donationThanks');
 
     // Update page title
     document.title = t('title') + ' | BTC';
@@ -716,20 +812,33 @@ function updateBTCDisplay() {
     document.getElementById('growth-multiple').textContent = growthMultiple + 'x';
 }
 
+function getItemsForCategory(category) {
+    if (category === 'all') {
+        return Object.keys(COUNTRIES[currentCountry].items);
+    }
+    return CATEGORIES[category]?.items || [];
+}
+
 function renderItems() {
     const grid = document.getElementById('items-grid');
     const country = COUNTRIES[currentCountry];
+    const itemKeys = getItemsForCategory(currentCategory);
 
     grid.innerHTML = '';
 
-    for (const [key, item] of Object.entries(country.items)) {
+    for (const key of itemKeys) {
+        const item = country.items[key];
+        if (!item) continue;
+
         const quantity = selectedItems[key] || 0;
         const div = document.createElement('div');
         div.className = `item-card ${quantity > 0 ? 'selected' : ''}`;
         div.dataset.key = key;
 
+        const iconSvg = ICONS[key] || `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/></svg>`;
+
         div.innerHTML = `
-            <div class="item-icon">${item.icon}</div>
+            <div class="item-icon">${iconSvg}</div>
             <div class="item-name">${getItemName(key)}</div>
             <div class="item-price">${formatCurrency(item.price)}</div>
             ${quantity > 0 ? `<div class="item-quantity">${quantity}</div>` : ''}
@@ -787,9 +896,10 @@ function updateResults() {
             const item = country.items[key];
             const itemTotal = item.price * quantity;
             totalSpent += itemTotal;
+            const iconSvg = ICONS[key] || `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/></svg>`;
             itemsHtml += `
                 <div class="selected-item">
-                    <span class="sel-icon">${item.icon}</span>
+                    <span class="sel-icon">${iconSvg}</span>
                     <span class="sel-name">${getItemName(key)}</span>
                     <span class="sel-qty">×${quantity}</span>
                     <span class="sel-price">${formatCurrency(itemTotal)}</span>
@@ -824,10 +934,32 @@ function updateTimePeriod(dailyTotal, btcPriceLocal, targetPriceLocal) {
 function changeCountry(countryCode) {
     currentCountry = countryCode;
     selectedItems = {};
+    currentCategory = 'all';
     updateLanguage();
+    updateCategoryTabs();
     renderItems();
     updateBTCDisplay();
     updateResults();
+}
+
+function updateCategoryTabs() {
+    const tabs = document.querySelectorAll('.category-tab');
+    const catTrans = CATEGORY_TRANSLATIONS[currentCountry] || CATEGORY_TRANSLATIONS['US'];
+
+    tabs.forEach(tab => {
+        const category = tab.dataset.category;
+        const span = tab.querySelector('span');
+        if (span && catTrans[category]) {
+            span.textContent = catTrans[category];
+        }
+        tab.classList.toggle('active', category === currentCategory);
+    });
+}
+
+function setCategory(category) {
+    currentCategory = category;
+    updateCategoryTabs();
+    renderItems();
 }
 
 // ===== EVENT LISTENERS =====
@@ -851,8 +983,58 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Category tabs
+    document.querySelectorAll('.category-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            setCategory(tab.dataset.category);
+        });
+    });
+
     updateLanguage();
+    updateCategoryTabs();
     renderItems();
     fetchBTCPrice();
     setInterval(fetchBTCPrice, 60000);
+
+    // Donation modal handlers
+    const modal = document.getElementById('donation-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const btcAddressEl = document.getElementById('btc-address');
+    const qrCode = document.getElementById('qr-code');
+
+    document.getElementById('lightning-btn').addEventListener('click', () => {
+        modalTitle.textContent = t('sendLightning');
+        btcAddressEl.textContent = DONATION_CONFIG.lightningAddress;
+        qrCode.innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(DONATION_CONFIG.lightningAddress)}" alt="Lightning QR">`;
+        modal.classList.add('active');
+    });
+
+    document.getElementById('btc-btn').addEventListener('click', () => {
+        modalTitle.textContent = t('sendBitcoin');
+        btcAddressEl.textContent = DONATION_CONFIG.btcAddress;
+        qrCode.innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=bitcoin:${DONATION_CONFIG.btcAddress}" alt="Bitcoin QR">`;
+        modal.classList.add('active');
+    });
+
+    document.getElementById('modal-close').addEventListener('click', () => {
+        modal.classList.remove('active');
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.remove('active');
+    });
+
+    document.getElementById('copy-btn').addEventListener('click', () => {
+        const address = btcAddressEl.textContent;
+        navigator.clipboard.writeText(address).then(() => {
+            const copyBtn = document.getElementById('copy-btn');
+            const copyText = document.getElementById('copy-text');
+            copyBtn.classList.add('copied');
+            copyText.textContent = t('copied');
+            setTimeout(() => {
+                copyBtn.classList.remove('copied');
+                copyText.textContent = t('copyAddress');
+            }, 2000);
+        });
+    });
 });
