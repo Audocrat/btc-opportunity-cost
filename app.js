@@ -64,7 +64,15 @@ const TRANSLATIONS = {
             chips: "Chipsy/Snacky",
             wine: "Sklenka vína",
             cocktail: "Koktejl",
-            vape: "Náplň do e-cigarety"
+            vape: "Náplň do e-cigarety",
+            monster: "White Monster",
+            zyn: "ZYN (nikotinové sáčky)",
+            netflix: "Netflix (měsíčně)",
+            spotify: "Spotify (měsíčně)",
+            uber_eats: "Uber Eats objednávka",
+            weed: "Tráva (1g)",
+            kratom: "Kratom",
+            cocaine: "Kokain (1g)"
         }
     },
     US: {
@@ -122,7 +130,15 @@ const TRANSLATIONS = {
             chips: "Chips/Snacks",
             wine: "Glass of Wine",
             cocktail: "Cocktail",
-            vape: "Vape Juice"
+            vape: "Vape Juice",
+            monster: "White Monster",
+            zyn: "ZYN (nicotine pouches)",
+            netflix: "Netflix (monthly)",
+            spotify: "Spotify (monthly)",
+            uber_eats: "Uber Eats order",
+            weed: "Weed (1g)",
+            kratom: "Kratom",
+            cocaine: "Cocaine (1g)"
         }
     },
     GB: {
@@ -180,7 +196,15 @@ const TRANSLATIONS = {
             chips: "Crisps/Snacks",
             wine: "Glass of Wine",
             cocktail: "Cocktail",
-            vape: "Vape Juice"
+            vape: "Vape Juice",
+            monster: "White Monster",
+            zyn: "ZYN (nicotine pouches)",
+            netflix: "Netflix (monthly)",
+            spotify: "Spotify (monthly)",
+            uber_eats: "Uber Eats order",
+            weed: "Weed (1g)",
+            kratom: "Kratom",
+            cocaine: "Cocaine (1g)"
         }
     },
     EU: {
@@ -238,7 +262,15 @@ const TRANSLATIONS = {
             chips: "Chips/Snacks",
             wine: "Glass of Wine",
             cocktail: "Cocktail",
-            vape: "Vape Juice"
+            vape: "Vape Juice",
+            monster: "White Monster",
+            zyn: "ZYN (nicotine pouches)",
+            netflix: "Netflix (monthly)",
+            spotify: "Spotify (monthly)",
+            uber_eats: "Uber Eats order",
+            weed: "Weed (1g)",
+            kratom: "Kratom",
+            cocaine: "Cocaine (1g)"
         }
     },
     FR: {
@@ -296,7 +328,15 @@ const TRANSLATIONS = {
             chips: "Chips/Snacks",
             wine: "Verre de vin",
             cocktail: "Cocktail",
-            vape: "E-liquide"
+            vape: "E-liquide",
+            monster: "White Monster",
+            zyn: "ZYN (sachets de nicotine)",
+            netflix: "Netflix (mensuel)",
+            spotify: "Spotify (mensuel)",
+            uber_eats: "Commande Uber Eats",
+            weed: "Herbe (1g)",
+            kratom: "Kratom",
+            cocaine: "Cocaïne (1g)"
         }
     },
     IT: {
@@ -354,7 +394,15 @@ const TRANSLATIONS = {
             chips: "Patatine/Snack",
             wine: "Bicchiere di vino",
             cocktail: "Cocktail",
-            vape: "Liquido per sigaretta elettronica"
+            vape: "Liquido per sigaretta elettronica",
+            monster: "White Monster",
+            zyn: "ZYN (bustine di nicotina)",
+            netflix: "Netflix (mensile)",
+            spotify: "Spotify (mensile)",
+            uber_eats: "Ordine Uber Eats",
+            weed: "Erba (1g)",
+            kratom: "Kratom",
+            cocaine: "Cocaina (1g)"
         }
     },
     PL: {
@@ -412,7 +460,15 @@ const TRANSLATIONS = {
             chips: "Chipsy/Przekąski",
             wine: "Kieliszek wina",
             cocktail: "Koktajl",
-            vape: "Liquid do e-papierosa"
+            vape: "Liquid do e-papierosa",
+            monster: "White Monster",
+            zyn: "ZYN (saszetki nikotynowe)",
+            netflix: "Netflix (miesięcznie)",
+            spotify: "Spotify (miesięcznie)",
+            uber_eats: "Zamówienie Uber Eats",
+            weed: "Trawa (1g)",
+            kratom: "Kratom",
+            cocaine: "Kokaina (1g)"
         }
     },
     DE: {
@@ -470,7 +526,15 @@ const TRANSLATIONS = {
             chips: "Chips/Snacks",
             wine: "Glas Wein",
             cocktail: "Cocktail",
-            vape: "Vape-Liquid"
+            vape: "Vape-Liquid",
+            monster: "White Monster",
+            zyn: "ZYN (Nikotinbeutel)",
+            netflix: "Netflix (monatlich)",
+            spotify: "Spotify (monatlich)",
+            uber_eats: "Uber Eats Bestellung",
+            weed: "Gras (1g)",
+            kratom: "Kratom",
+            cocaine: "Kokain (1g)"
         }
     },
     SK: {
@@ -528,7 +592,15 @@ const TRANSLATIONS = {
             chips: "Chipsy/Snacky",
             wine: "Pohár vína",
             cocktail: "Koktejl",
-            vape: "Náplň do e-cigarety"
+            vape: "Náplň do e-cigarety",
+            monster: "White Monster",
+            zyn: "ZYN (nikotínové vrecúška)",
+            netflix: "Netflix (mesačne)",
+            spotify: "Spotify (mesačne)",
+            uber_eats: "Uber Eats objednávka",
+            weed: "Tráva (1g)",
+            kratom: "Kratom",
+            cocaine: "Kokaín (1g)"
         }
     },
     HU: {
@@ -586,7 +658,15 @@ const TRANSLATIONS = {
             chips: "Chips/Snack",
             wine: "Pohár bor",
             cocktail: "Koktél",
-            vape: "Vape folyadék"
+            vape: "Vape folyadék",
+            monster: "White Monster",
+            zyn: "ZYN (nikotintasakok)",
+            netflix: "Netflix (havonta)",
+            spotify: "Spotify (havonta)",
+            uber_eats: "Uber Eats rendelés",
+            weed: "Fű (1g)",
+            kratom: "Kratom",
+            cocaine: "Kokain (1g)"
         }
     }
 };
@@ -615,7 +695,15 @@ const COUNTRIES = {
             chips: { price: 40, icon: "🥨" },
             wine: { price: 80, icon: "🍷" },
             cocktail: { price: 180, icon: "🍹" },
-            vape: { price: 200, icon: "💨" }
+            vape: { price: 200, icon: "💨" },
+            monster: { price: 45, icon: "⚡" },
+            zyn: { price: 150, icon: "🫧" },
+            netflix: { price: 300, icon: "📺" },
+            spotify: { price: 170, icon: "🎵" },
+            uber_eats: { price: 350, icon: "🛵" },
+            weed: { price: 300, icon: "🌿" },
+            kratom: { price: 200, icon: "🍃" },
+            cocaine: { price: 2500, icon: "❄️" }
         }
     },
     US: {
@@ -640,7 +728,15 @@ const COUNTRIES = {
             chips: { price: 4, icon: "🥨" },
             wine: { price: 12, icon: "🍷" },
             cocktail: { price: 15, icon: "🍹" },
-            vape: { price: 25, icon: "💨" }
+            vape: { price: 25, icon: "💨" },
+            monster: { price: 3.50, icon: "⚡" },
+            zyn: { price: 5, icon: "🫧" },
+            netflix: { price: 15.50, icon: "📺" },
+            spotify: { price: 11, icon: "🎵" },
+            uber_eats: { price: 25, icon: "🛵" },
+            weed: { price: 15, icon: "🌿" },
+            kratom: { price: 12, icon: "🍃" },
+            cocaine: { price: 80, icon: "❄️" }
         }
     },
     GB: {
@@ -665,7 +761,15 @@ const COUNTRIES = {
             chips: { price: 2, icon: "🥨" },
             wine: { price: 7, icon: "🍷" },
             cocktail: { price: 12, icon: "🍹" },
-            vape: { price: 15, icon: "💨" }
+            vape: { price: 15, icon: "💨" },
+            monster: { price: 2, icon: "⚡" },
+            zyn: { price: 7, icon: "🫧" },
+            netflix: { price: 11, icon: "📺" },
+            spotify: { price: 11, icon: "🎵" },
+            uber_eats: { price: 20, icon: "🛵" },
+            weed: { price: 10, icon: "🌿" },
+            kratom: { price: 15, icon: "🍃" },
+            cocaine: { price: 80, icon: "❄️" }
         }
     },
     EU: {
@@ -690,7 +794,15 @@ const COUNTRIES = {
             chips: { price: 2.50, icon: "🥨" },
             wine: { price: 5, icon: "🍷" },
             cocktail: { price: 10, icon: "🍹" },
-            vape: { price: 15, icon: "💨" }
+            vape: { price: 15, icon: "💨" },
+            monster: { price: 2.50, icon: "⚡" },
+            zyn: { price: 6, icon: "🫧" },
+            netflix: { price: 13, icon: "📺" },
+            spotify: { price: 11, icon: "🎵" },
+            uber_eats: { price: 22, icon: "🛵" },
+            weed: { price: 10, icon: "🌿" },
+            kratom: { price: 12, icon: "🍃" },
+            cocaine: { price: 70, icon: "❄️" }
         }
     },
     FR: {
@@ -715,7 +827,15 @@ const COUNTRIES = {
             chips: { price: 3, icon: "🥨" },
             wine: { price: 5, icon: "🍷" },
             cocktail: { price: 12, icon: "🍹" },
-            vape: { price: 8, icon: "💨" }
+            vape: { price: 8, icon: "💨" },
+            monster: { price: 2.50, icon: "⚡" },
+            zyn: { price: 7, icon: "🫧" },
+            netflix: { price: 13, icon: "📺" },
+            spotify: { price: 11, icon: "🎵" },
+            uber_eats: { price: 22, icon: "🛵" },
+            weed: { price: 12, icon: "🌿" },
+            kratom: { price: 15, icon: "🍃" },
+            cocaine: { price: 80, icon: "❄️" }
         }
     },
     IT: {
@@ -740,7 +860,15 @@ const COUNTRIES = {
             chips: { price: 2.50, icon: "🥨" },
             wine: { price: 4, icon: "🍷" },
             cocktail: { price: 10, icon: "🍹" },
-            vape: { price: 10, icon: "💨" }
+            vape: { price: 10, icon: "💨" },
+            monster: { price: 2.50, icon: "⚡" },
+            zyn: { price: 6, icon: "🫧" },
+            netflix: { price: 13, icon: "📺" },
+            spotify: { price: 11, icon: "🎵" },
+            uber_eats: { price: 20, icon: "🛵" },
+            weed: { price: 15, icon: "🌿" },
+            kratom: { price: 12, icon: "🍃" },
+            cocaine: { price: 90, icon: "❄️" }
         }
     },
     PL: {
@@ -765,7 +893,15 @@ const COUNTRIES = {
             chips: { price: 8, icon: "🥨" },
             wine: { price: 20, icon: "🍷" },
             cocktail: { price: 35, icon: "🍹" },
-            vape: { price: 50, icon: "💨" }
+            vape: { price: 50, icon: "💨" },
+            monster: { price: 7, icon: "⚡" },
+            zyn: { price: 25, icon: "🫧" },
+            netflix: { price: 50, icon: "📺" },
+            spotify: { price: 40, icon: "🎵" },
+            uber_eats: { price: 80, icon: "🛵" },
+            weed: { price: 50, icon: "🌿" },
+            kratom: { price: 40, icon: "🍃" },
+            cocaine: { price: 350, icon: "❄️" }
         }
     },
     DE: {
@@ -790,7 +926,15 @@ const COUNTRIES = {
             chips: { price: 2, icon: "🥨" },
             wine: { price: 5, icon: "🍷" },
             cocktail: { price: 10, icon: "🍹" },
-            vape: { price: 12, icon: "💨" }
+            vape: { price: 12, icon: "💨" },
+            monster: { price: 2, icon: "⚡" },
+            zyn: { price: 6, icon: "🫧" },
+            netflix: { price: 13, icon: "📺" },
+            spotify: { price: 11, icon: "🎵" },
+            uber_eats: { price: 20, icon: "🛵" },
+            weed: { price: 10, icon: "🌿" },
+            kratom: { price: 12, icon: "🍃" },
+            cocaine: { price: 75, icon: "❄️" }
         }
     },
     SK: {
@@ -815,7 +959,15 @@ const COUNTRIES = {
             chips: { price: 1.50, icon: "🥨" },
             wine: { price: 3, icon: "🍷" },
             cocktail: { price: 7, icon: "🍹" },
-            vape: { price: 10, icon: "💨" }
+            vape: { price: 10, icon: "💨" },
+            monster: { price: 1.50, icon: "⚡" },
+            zyn: { price: 5, icon: "🫧" },
+            netflix: { price: 5, icon: "📺" },
+            spotify: { price: 5, icon: "🎵" },
+            uber_eats: { price: 15, icon: "🛵" },
+            weed: { price: 8, icon: "🌿" },
+            kratom: { price: 10, icon: "🍃" },
+            cocaine: { price: 60, icon: "❄️" }
         }
     },
     HU: {
@@ -840,7 +992,15 @@ const COUNTRIES = {
             chips: { price: 500, icon: "🥨" },
             wine: { price: 800, icon: "🍷" },
             cocktail: { price: 2500, icon: "🍹" },
-            vape: { price: 4000, icon: "💨" }
+            vape: { price: 4000, icon: "💨" },
+            monster: { price: 600, icon: "⚡" },
+            zyn: { price: 2000, icon: "🫧" },
+            netflix: { price: 4000, icon: "📺" },
+            spotify: { price: 3500, icon: "🎵" },
+            uber_eats: { price: 6000, icon: "🛵" },
+            weed: { price: 4000, icon: "🌿" },
+            kratom: { price: 3500, icon: "🍃" },
+            cocaine: { price: 30000, icon: "❄️" }
         }
     }
 };
@@ -1203,4 +1363,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 2000);
         });
     });
+
 });
+

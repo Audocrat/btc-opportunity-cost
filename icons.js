@@ -128,6 +128,62 @@ const ICONS = {
         <circle cx="16" cy="15" r="2"/>
         <path d="M12 10v4"/>
         <path d="M10 12h4"/>
+    </svg>`,
+
+    // Gen Z Items
+    monster: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 2h8l1 4H7L8 2z"/>
+        <rect x="6" y="6" width="12" height="16" rx="2"/>
+        <path d="M9 10l2 4-2 4"/>
+        <path d="M15 10l-2 4 2 4"/>
+    </svg>`,
+
+    zyn: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"/>
+        <circle cx="12" cy="12" r="5"/>
+        <circle cx="12" cy="12" r="2"/>
+    </svg>`,
+
+    netflix: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="3" width="16" height="18" rx="2"/>
+        <path d="M8 7v10l4-5 4 5V7"/>
+    </svg>`,
+
+    spotify: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M8 9c2.5-.5 5.5-.5 8 1"/>
+        <path d="M8 12c2-.4 4.5-.4 6.5.8"/>
+        <path d="M9 15c1.5-.3 3.5-.3 5 .6"/>
+    </svg>`,
+
+    uber_eats: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="10" rx="2"/>
+        <path d="M12 11V8"/>
+        <circle cx="12" cy="5" r="3"/>
+        <path d="M7 16h2"/>
+        <path d="M15 16h2"/>
+    </svg>`,
+
+    kratom: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2c-4 4-6 8-6 12a6 6 0 0 0 12 0c0-4-2-8-6-12z"/>
+        <path d="M12 8v8"/>
+        <path d="M9 12h6"/>
+    </svg>`,
+
+    weed: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22v-8"/>
+        <path d="M12 14c-4 0-7-3-7-7 3 0 5 1 7 4 2-3 4-4 7-4 0 4-3 7-7 7z"/>
+        <path d="M12 10c0-4 0-6 0-8"/>
+        <path d="M8 6c2 1 3 3 4 4"/>
+        <path d="M16 6c-2 1-3 3-4 4"/>
+    </svg>`,
+
+    cocaine: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 14h16"/>
+        <path d="M6 10h12"/>
+        <path d="M8 6h8"/>
+        <path d="M20 18l-3-3"/>
+        <path d="M17 18h3v-3"/>
     </svg>`
 };
 
@@ -135,7 +191,7 @@ const ICONS = {
 const CATEGORIES = {
     smoking: {
         id: 'smoking',
-        items: ['cigarettes', 'vape']
+        items: ['cigarettes', 'vape', 'zyn']
     },
     alcohol: {
         id: 'alcohol',
@@ -143,11 +199,19 @@ const CATEGORIES = {
     },
     caffeine: {
         id: 'caffeine',
-        items: ['coffee', 'cappuccino', 'energy', 'soda']
+        items: ['coffee', 'cappuccino', 'energy', 'monster', 'soda']
     },
     food: {
         id: 'food',
-        items: ['bigmac', 'fastfood', 'candy', 'chips']
+        items: ['bigmac', 'fastfood', 'candy', 'chips', 'uber_eats']
+    },
+    subscriptions: {
+        id: 'subscriptions',
+        items: ['netflix', 'spotify']
+    },
+    substances: {
+        id: 'substances',
+        items: ['weed', 'kratom', 'cocaine']
     },
     gambling: {
         id: 'gambling',
@@ -157,16 +221,16 @@ const CATEGORIES = {
 
 // Category translations
 const CATEGORY_TRANSLATIONS = {
-    CZ: { all: 'Vše', smoking: 'Kouření', alcohol: 'Alkohol', caffeine: 'Kofein', food: 'Jídlo', gambling: 'Hazard' },
-    US: { all: 'All', smoking: 'Smoking', alcohol: 'Alcohol', caffeine: 'Caffeine', food: 'Food', gambling: 'Gambling' },
-    GB: { all: 'All', smoking: 'Smoking', alcohol: 'Alcohol', caffeine: 'Caffeine', food: 'Food', gambling: 'Gambling' },
-    EU: { all: 'All', smoking: 'Smoking', alcohol: 'Alcohol', caffeine: 'Caffeine', food: 'Food', gambling: 'Gambling' },
-    FR: { all: 'Tout', smoking: 'Tabac', alcohol: 'Alcool', caffeine: 'Caféine', food: 'Nourriture', gambling: 'Jeux' },
-    IT: { all: 'Tutti', smoking: 'Fumo', alcohol: 'Alcol', caffeine: 'Caffeina', food: 'Cibo', gambling: 'Gioco' },
-    PL: { all: 'Wszystko', smoking: 'Palenie', alcohol: 'Alkohol', caffeine: 'Kofeina', food: 'Jedzenie', gambling: 'Hazard' },
-    DE: { all: 'Alle', smoking: 'Rauchen', alcohol: 'Alkohol', caffeine: 'Koffein', food: 'Essen', gambling: 'Glücksspiel' },
-    SK: { all: 'Všetko', smoking: 'Fajčenie', alcohol: 'Alkohol', caffeine: 'Kofeín', food: 'Jedlo', gambling: 'Hazard' },
-    HU: { all: 'Összes', smoking: 'Dohányzás', alcohol: 'Alkohol', caffeine: 'Koffein', food: 'Étel', gambling: 'Szerencsejáték' }
+    CZ: { all: 'Vše', smoking: 'Kouření', alcohol: 'Alkohol', caffeine: 'Kofein', food: 'Jídlo', subscriptions: 'Předplatné', substances: 'Drogy', gambling: 'Hazard' },
+    US: { all: 'All', smoking: 'Smoking', alcohol: 'Alcohol', caffeine: 'Caffeine', food: 'Food', subscriptions: 'Subs', substances: 'Substances', gambling: 'Gambling' },
+    GB: { all: 'All', smoking: 'Smoking', alcohol: 'Alcohol', caffeine: 'Caffeine', food: 'Food', subscriptions: 'Subs', substances: 'Substances', gambling: 'Gambling' },
+    EU: { all: 'All', smoking: 'Smoking', alcohol: 'Alcohol', caffeine: 'Caffeine', food: 'Food', subscriptions: 'Subs', substances: 'Substances', gambling: 'Gambling' },
+    FR: { all: 'Tout', smoking: 'Tabac', alcohol: 'Alcool', caffeine: 'Caféine', food: 'Nourriture', subscriptions: 'Abos', substances: 'Drogues', gambling: 'Jeux' },
+    IT: { all: 'Tutti', smoking: 'Fumo', alcohol: 'Alcol', caffeine: 'Caffeina', food: 'Cibo', subscriptions: 'Abbonamenti', substances: 'Sostanze', gambling: 'Gioco' },
+    PL: { all: 'Wszystko', smoking: 'Palenie', alcohol: 'Alkohol', caffeine: 'Kofeina', food: 'Jedzenie', subscriptions: 'Subskrypcje', substances: 'Używki', gambling: 'Hazard' },
+    DE: { all: 'Alle', smoking: 'Rauchen', alcohol: 'Alkohol', caffeine: 'Koffein', food: 'Essen', subscriptions: 'Abos', substances: 'Drogen', gambling: 'Glücksspiel' },
+    SK: { all: 'Všetko', smoking: 'Fajčenie', alcohol: 'Alkohol', caffeine: 'Kofeín', food: 'Jedlo', subscriptions: 'Predplatné', substances: 'Drogy', gambling: 'Hazard' },
+    HU: { all: 'Összes', smoking: 'Dohányzás', alcohol: 'Alkohol', caffeine: 'Koffein', food: 'Étel', subscriptions: 'Előfizetések', substances: 'Szerek', gambling: 'Szerencsejáték' }
 };
 
 // Export for use in main app
